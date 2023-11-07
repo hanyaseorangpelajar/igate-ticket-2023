@@ -10,12 +10,17 @@ function Form() {
     phoneNumber: '',
   });
 
-  const handleChange = (e) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSelectChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
   };
 
@@ -30,7 +35,7 @@ function Form() {
               type="email"
               name="email"
               value={formData.email}
-              onChange={handleChange}
+              onChange={handleInputChange}
               required
               placeholder='Make sure the email is valid'
               className="dark:bg-gray-700 dark:text-white p-2 rounded w-full"
@@ -42,7 +47,7 @@ function Form() {
               type="text"
               name="name"
               value={formData.name}
-              onChange={handleChange}
+              onChange={handleInputChange}
               required
               placeholder='Your name'
               className="dark:bg-gray-700 dark:text-white p-2 rounded w-full"
@@ -54,7 +59,7 @@ function Form() {
               type="text"
               name="nim"
               value={formData.nim}
-              onChange={handleChange}
+              onChange={handleInputChange}
               required
               placeholder='Your student number'
               className="dark:bg-gray-700 dark:text-white p-2 rounded w-full"
@@ -65,7 +70,7 @@ function Form() {
             <select
               name="batchYear"
               value={formData.batchYear}
-              onChange={handleChange}
+              onChange={handleSelectChange}
               className="dark:bg-gray-700 dark:text-white p-2 rounded w-full"
             >
               <option value="2023">2023</option>
@@ -80,7 +85,7 @@ function Form() {
               type="tel"
               name="phoneNumber"
               value={formData.phoneNumber}
-              onChange={handleChange}
+              onChange={handleInputChange}
               required
               placeholder='Your phone number'
               className="dark:bg-gray-700 dark:text-white p-2 rounded w-full"
