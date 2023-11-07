@@ -1,5 +1,7 @@
+"use clinet"
 import React from 'react';
 import Image from 'next/image';
+import VanillaTilt from 'vanilla-tilt';
 
 function Hero() {
   return (

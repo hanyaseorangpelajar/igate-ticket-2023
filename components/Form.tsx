@@ -26,7 +26,7 @@ function Form() {
 
   return (
     <div className="flex justify-center items-center h-screen border-gray-400 border-dashed border-4 m-4">
-      <div className="dark:bg-gray-900 text-white p-4 rounded-lg w-full max-w-md">
+      <div className="dark:bg-gray-900 text-white p-4 m-2 rounded-lg w-full max-w-md">
         <h2 className="text-2xl mb-4">Registration</h2>
         <form onSubmit={handleSubmit}>
           <div className="mb-4">
@@ -61,7 +61,7 @@ function Form() {
               value={formData.nim}
               onChange={handleInputChange}
               required
-              placeholder='Your student number'
+              placeholder='240**********'
               className="dark:bg-gray-700 dark:text-white p-2 rounded w-full"
             />
           </div>
@@ -87,7 +87,7 @@ function Form() {
               value={formData.phoneNumber}
               onChange={handleInputChange}
               required
-              placeholder='Your phone number'
+              placeholder='08xxxxxxxxxx'
               className="dark:bg-gray-700 dark:text-white p-2 rounded w-full"
             />
           </div>

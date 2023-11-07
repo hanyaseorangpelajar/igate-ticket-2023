@@ -15,9 +15,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className='bg-zinc-800 text-white border border-white border-solid border-4 m-5 font-mono'>
+      <body className='overflow-auto bg-zinc-800 text-white border border-white border-solid border-4 m-2 font-mono'>
         <Header />
-        <main className='relative overflow-hidden'>
+        <main className='relative'>
           {children}
         </main>        
         <Footer />

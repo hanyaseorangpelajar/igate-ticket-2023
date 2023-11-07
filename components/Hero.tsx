@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 
+
 function Hero() {
   return (
     <section className='h-screen border-gray-400 border-dashed border-4 m-4 flex flex-col justify-center items-center'>
