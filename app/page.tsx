@@ -1,7 +1,13 @@
+'use-client'
+import Form from "@/components/Form";
+import Hero from "@/components/Hero";
+import PaymentMethod from "@/components/PaymentMethod";
 export default function Home() {
   return (
-    <h1 className='font-bold text-teal-500 text-2xl'>
-      Hello
-    </h1>
+    <>
+    <Hero/>
+    <PaymentMethod/>
+    <Form/>
+    </>
   )
 }

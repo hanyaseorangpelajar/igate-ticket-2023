@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import './globals.css'
-import Navbar from '@/components/Navbar'
+import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
@@ -15,8 +15,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
-        <Navbar />
+      <body className='bg-zinc-800 text-white border border-white border-solid border-4 m-5 font-mono'>
+        <Header />
         <main className='relative overflow-hidden'>
           {children}
         </main>        

@@ -7,6 +7,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      boxShadow: {
+        'solid': '-10px 10px 0px 0px',
+      },
       colors: {
         green: {
           50: '#30AF5B',
