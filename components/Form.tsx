@@ -1,13 +1,13 @@
-"use client"
-import React, { useState } from 'react';
+"use client";
+import React, { useState } from "react";
 
 function Form() {
   const [formData, setFormData] = useState({
-    email: '',
-    name: '',
-    nim: '',
-    batchYear: '2023',
-    phoneNumber: '',
+    email: "",
+    name: "",
+    nim: "",
+    batchYear: "2023",
+    phoneNumber: "",
   });
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -37,7 +37,7 @@ function Form() {
               value={formData.email}
               onChange={handleInputChange}
               required
-              placeholder='Make sure the email is valid'
+              placeholder="Make sure the email is valid"
               className="dark:bg-gray-700 dark:text-white p-2 rounded w-full"
             />
           </div>
@@ -49,7 +49,7 @@ function Form() {
               value={formData.name}
               onChange={handleInputChange}
               required
-              placeholder='Your name'
+              placeholder="Your name"
               className="dark:bg-gray-700 dark:text-white p-2 rounded w-full"
             />
           </div>
@@ -61,7 +61,7 @@ function Form() {
               value={formData.nim}
               onChange={handleInputChange}
               required
-              placeholder='240**********'
+              placeholder="240**********"
               className="dark:bg-gray-700 dark:text-white p-2 rounded w-full"
             />
           </div>
@@ -87,12 +87,15 @@ function Form() {
               value={formData.phoneNumber}
               onChange={handleInputChange}
               required
-              placeholder='08xxxxxxxxxx'
+              placeholder="08xxxxxxxxxx"
               className="dark:bg-gray-700 dark:text-white p-2 rounded w-full"
             />
           </div>
           <div>
-            <button type="submit" className="dark:bg-blue-600 text-white p-2 rounded w-full">
+            <button
+              type="submit"
+              className="dark:bg-blue-600 text-white p-2 rounded w-full"
+            >
               Submit
             </button>
           </div>
