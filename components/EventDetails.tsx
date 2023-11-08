@@ -26,7 +26,7 @@ function EventDetails() {
             </ul>
           </div>
         </div>
-        <div className="bg-white rounded m-4 p-2 text-justify text-black">
+        <div className="bg-white rounded m-4 p-2 text-black">
           <h2 className="text-xl">Don'ts</h2>
           <div className="bg-red-300 rounded m-2 p-6">
             <ul className="list-disc">
@@ -55,7 +55,7 @@ function EventDetails() {
       </div>
       <div className="border-gray-400 border-dashed border-4 m-4 p-4">
         <h1 className="text-center text-2xl">FAQ</h1>
-        <div className="bg-white text-black rounded m-4 p-4 text-justify">
+        <div className="bg-white text-black rounded m-4 p-4">
           <h2 className="bg-black text-white rounded p-2">
             I-GATE itu apa sih?
           </h2>
@@ -69,7 +69,7 @@ function EventDetails() {
             suasana yang kondusif dalam keluarga Informatika Undip.
           </p>
         </div>
-        <div className="bg-white text-black rounded m-4 p-4 text-justify">
+        <div className="bg-white text-black rounded m-4 p-4">
           <h2 className="bg-black text-white rounded p-2">
             Kapan dan dimana I-GATE diselenggarakan?
           </h2>
@@ -81,7 +81,7 @@ function EventDetails() {
             yaa!
           </p>
         </div>
-        <div className="bg-white text-black rounded m-4 p-4 text-justify">
+        <div className="bg-white text-black rounded m-4 p-4">
           <h2 className="bg-black text-white rounded p-2">
             Di I-GATE ada apa aja sih?
           </h2>
@@ -91,7 +91,7 @@ function EventDetails() {
             puncak acara yang meriah.
           </p>
         </div>
-        <div className="bg-white text-black rounded m-4 p-4 text-justify">
+        <div className="bg-white text-black rounded m-4 p-4">
           <h2 className="bg-black text-white rounded p-2">
             Emangnya harga tiket I-GATE itu berapa sih?
           </h2>
@@ -101,19 +101,22 @@ function EventDetails() {
             berlangsung
           </p>
         </div>
-        <div className="bg-white text-black rounded m-4 p-4 text-justify">
+        <div className="bg-white text-black rounded m-4 p-4">
           <h2 className="bg-black text-white rounded p-2">
             Bagaimana tata cara pembelian tiket online?
           </h2>
           <p>
-            Bukalah online ticketing via https://itix.com/ Lalu scrull ke bagian
-            pembayaran maka ditemukan QRIS untuk discan dan lakukanlah
-            pembayaran (satu pembayaran hanya untuk satu orang) Scrull kebawah
-            lagi maka ada form data diri dan upload bukti pembayaran, isi semua
-            field dan pastikan data sudah benar.
+            1. Bukalah online ticketing via https://itix.com/. Lalu scroll ke
+            bagian pembayaran maka ditemukan QRIS untuk discan dan lakukanlah
+            pembayaran (satu pembayaran hanya untuk satu orang)
+          </p>
+          <br></br>
+          <p>
+            2. Scroll kebawah lagi maka ada form data diri dan upload bukti
+            pembayaran, isi semua field dan pastikan data sudah benar.
           </p>
         </div>
-        <div className="bg-white text-black rounded m-4 p-4 text-justify">
+        <div className="bg-white text-black rounded m-4 p-4">
           <h2 className="bg-black text-white rounded p-2">
             Beli tiket offline?
           </h2>
@@ -122,7 +125,7 @@ function EventDetails() {
             web.
           </p>
         </div>
-        <div className="bg-white text-black rounded m-4 p-4 text-justify">
+        <div className="bg-white text-black rounded m-4 p-4">
           <h2 className="bg-black text-white rounded p-2">Dresscode</h2>
           <p>Jantan: Jas/Kemeja</p>
           <p>Perempuan: Dress atau Bawahan Rok</p>

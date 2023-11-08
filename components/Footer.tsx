@@ -7,7 +7,9 @@ const Footer = () => {
       <div className="container flex items-center justify-between">
         <div className="flex items-center m-4">
           {/* <Image src="/logo.png" alt="logo" width={100} height={100} /> */}
-          <p>Made with Full of &#x1F496; by I-GATE</p>
+          <p>
+            Made with <br></br> Full of &#x1F496; <br></br> by I-GATE
+          </p>
         </div>
         <div className="flex m-4">
           <p>Contact:</p>

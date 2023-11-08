@@ -17,7 +17,7 @@ function Hero() {
       </div>
       <div className="p-4">
         <p className="text-4xl text-white font-extrabold mb-4">
-          More About I-GATE
+          More About <br></br>I-GATE
         </p>
         <Link href="/more" className="bg-white rounded text-black p-2">
           CLICK.me
