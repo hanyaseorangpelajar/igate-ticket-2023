@@ -10,14 +10,18 @@ const Footer = () => {
           <p>Made with Full of &#x1F496; by I-GATE</p>
         </div>
         <div className="flex m-4">
+          <p>Contact:</p>
           <a href="https://wa.me/6282242118541">
-            <Image src="/whatsapp.png" alt="logo" width={20} height={20} />
+            <p className="ml-2 hover:bg-white hover:text-black hover:rounded">
+              Tera
+            </p>
           </a>
-          <p className="ml-2 mr-4">Tera</p>
+          <p className="ml-2">/</p>
           <a href="https://wa.me/6281375264858">
-            <Image src="/whatsapp.png" alt="logo" width={20} height={20} />
+            <p className="ml-2 hover:bg-white hover:text-black hover:rounded">
+              Rosa
+            </p>
           </a>
-          <p className="ml-2">Rosa</p>
         </div>
       </div>
     </footer>

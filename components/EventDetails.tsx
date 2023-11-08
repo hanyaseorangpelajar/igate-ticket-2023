@@ -3,11 +3,11 @@ import React from "react";
 function EventDetails() {
   return (
     <div className="h-full">
-      <div className="border-gray-400 border-dashed border-4 m-4 p-4">
+      <div className="border-gray-400 border-dashed border-4 m-4">
         <h1 className="text-center text-2xl">Do's & Don'ts</h1>
-        <div className="bg-white rounded m-4 p-4 text-justify text-black">
+        <div className="bg-white rounded m-4 p-2 text-black">
           <h2 className="text-xl">Do</h2>
-          <div className="bg-green-400 rounded m-4 p-8">
+          <div className="bg-green-400 rounded m-2 p-6">
             <ul className="list-disc">
               <li>Mematuhi peraturan yang ada.</li>
               <li>
@@ -26,9 +26,9 @@ function EventDetails() {
             </ul>
           </div>
         </div>
-        <div className="bg-white rounded m-4 p-4 text-justify text-black">
+        <div className="bg-white rounded m-4 p-2 text-justify text-black">
           <h2 className="text-xl">Don'ts</h2>
-          <div className="bg-red-300 rounded m-4 p-8">
+          <div className="bg-red-300 rounded m-2 p-6">
             <ul className="list-disc">
               <li>Dilarang membawa benda tajam.</li>
               <li> Dilarang membawa vape/rokok.</li>
