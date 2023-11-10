@@ -80,6 +80,8 @@ function Form() {
       setFile(null);
 
       alert("Data Added");
+
+      window.location.reload();
     } catch (error) {
       console.error("Error:", error);
     }
