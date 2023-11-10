@@ -4,7 +4,7 @@ import Link from "next/link";
 
 function Hero() {
   return (
-    <section className="h-screen border-gray-400 border-dashed border-4 m-4 flex flex-col justify-center items-center">
+    <section className="h-full border-gray-400 border-dashed border-4 m-4 p-2 flex flex-col justify-center items-center">
       <div className="p-4">
         <h1>This could be Yours !!!</h1>
         <Image
@@ -12,7 +12,7 @@ function Hero() {
           alt="ticket"
           width={800}
           height={800}
-          className="shadow-solid shadow-black"
+          className="shadow-solid shadow-white"
         />
       </div>
       <div className="p-4">

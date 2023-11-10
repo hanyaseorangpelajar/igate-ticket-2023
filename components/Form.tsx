@@ -1,5 +1,30 @@
 "use client";
 import React, { useState } from "react";
+import { db } from "@/app/firebaseConfig";
+import { collection, addDoc } from "firebase/firestore";
+
+async function addData(
+  email: string,
+  name: string,
+  nim: string,
+  batchYear: number,
+  phoneNumber: string
+) {
+  try {
+    const docRef = await addDoc(collection(db, "message"), {
+      email: email,
+      name: name,
+      nim: nim,
+      batchYear: batchYear,
+      phoneNumber: phoneNumber,
+    });
+    console.log("Data recorded with ID: ", docRef.id);
+    return true;
+  } catch (error) {
+    console.error("Data not recorded error: ", error);
+    return false;
+  }
+}
 
 function Form() {
   const [formData, setFormData] = useState({
@@ -20,8 +45,26 @@ function Form() {
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    const added = await addData(
+      formData.email,
+      formData.name,
+      formData.nim,
+      parseInt(formData.batchYear),
+      formData.phoneNumber
+    );
+    if (added) {
+      setFormData({
+        email: "",
+        name: "",
+        nim: "",
+        batchYear: "2023",
+        phoneNumber: "",
+      });
+
+      alert("Data Added");
+    }
   };
 
   return (
@@ -42,7 +85,7 @@ function Form() {
             />
           </div>
           <div className="mb-4">
-            <label>Name:</label>
+            <label>Nama:</label>
             <input
               type="text"
               name="name"
@@ -61,12 +104,12 @@ function Form() {
               value={formData.nim}
               onChange={handleInputChange}
               required
-              placeholder="240**********"
+              placeholder="240xxxxxxxxxxx"
               className="dark:bg-gray-700 dark:text-white p-2 rounded w-full"
             />
           </div>
           <div className="mb-4">
-            <label>Batch Year:</label>
+            <label>Angkatan:</label>
             <select
               name="batchYear"
               value={formData.batchYear}
@@ -76,18 +119,19 @@ function Form() {
               <option value="2023">2023</option>
               <option value="2022">2022</option>
               <option value="2021">2021</option>
+              <option value="2021">2020</option>
               <option value="Others">Others</option>
             </select>
           </div>
           <div className="mb-4">
-            <label>Phone Number:</label>
+            <label>No Whatsapp:</label>
             <input
               type="tel"
               name="phoneNumber"
               value={formData.phoneNumber}
               onChange={handleInputChange}
               required
-              placeholder="08xxxxxxxxxx"
+              placeholder="+62"
               className="dark:bg-gray-700 dark:text-white p-2 rounded w-full"
             />
           </div>

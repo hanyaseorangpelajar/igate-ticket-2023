@@ -13,6 +13,8 @@ function Hero() {
           height={250}
           className="shadow-solid shadow-black border-2"
         />
+        <br></br>
+        <h1 className="text-center text-xl">FARREL STORE666</h1>
       </div>
     </section>
   );

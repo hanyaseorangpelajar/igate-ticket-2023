@@ -127,7 +127,7 @@ function EventDetails() {
         </div>
         <div className="bg-white text-black rounded m-4 p-4">
           <h2 className="bg-black text-white rounded p-2">Dresscode</h2>
-          <p>Jantan: Jas/Kemeja</p>
+          <p>Laki-Laki: Jas (Kemeja)</p>
           <p>Perempuan: Dress atau Bawahan Rok</p>
         </div>
       </div>
