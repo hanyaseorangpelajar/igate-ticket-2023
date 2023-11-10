@@ -9,7 +9,8 @@ async function addData(
   name: string,
   nim: string,
   batchYear: number,
-  phoneNumber: string
+  phoneNumber: string,
+  fileUrl: string
 ) {
   try {
     const docRef = await addDoc(collection(db, "message"), {
@@ -18,6 +19,7 @@ async function addData(
       nim: nim,
       batchYear: batchYear,
       phoneNumber: phoneNumber,
+      fileUrl: fileUrl,
     });
     console.log("Data recorded with ID: ", docRef.id);
     return true;
@@ -50,23 +52,24 @@ function Form() {
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    try {
-      const added = await addData(
-        formData.email,
-        formData.name,
-        formData.nim,
-        parseInt(formData.batchYear),
-        formData.phoneNumber
-      );
 
-      if (added && file) {
+    try {
+      if (file) {
         const storageRef = ref(storage, `bukti-pembayaran/${file.name}`);
         await uploadBytes(storageRef, file);
+
         const downloadURL = await getDownloadURL(storageRef);
 
-        console.log("File uploaded. Download URL:", downloadURL);
+        await addData(
+          formData.email,
+          formData.name,
+          formData.nim,
+          parseInt(formData.batchYear),
+          formData.phoneNumber,
+          downloadURL
+        );
       }
 
       setFormData({
@@ -85,10 +88,10 @@ function Form() {
     } catch (error) {
       console.error("Error:", error);
     }
-  };
+  }
 
   return (
-    <div className="flex justify-center items-center h-screen border-gray-400 border-dashed border-4 m-4">
+    <div className="flex justify-center items-center h-full border-gray-400 border-dashed border-4 m-4 p-4">
       <div className="dark:bg-gray-900 text-white p-4 m-2 rounded-lg w-full max-w-md">
         <h2 className="text-2xl mb-4">Registration</h2>
         <form onSubmit={handleSubmit}>
@@ -100,7 +103,7 @@ function Form() {
               value={formData.email}
               onChange={handleInputChange}
               required
-              placeholder="Make sure the email is valid"
+              placeholder="Pastikan email valid"
               className="dark:bg-gray-700 dark:text-white p-2 rounded w-full"
             />
           </div>
@@ -112,7 +115,7 @@ function Form() {
               value={formData.name}
               onChange={handleInputChange}
               required
-              placeholder="Your name"
+              placeholder="Nama kamu"
               className="dark:bg-gray-700 dark:text-white p-2 rounded w-full"
             />
           </div>
@@ -151,7 +154,7 @@ function Form() {
               value={formData.phoneNumber}
               onChange={handleInputChange}
               required
-              placeholder="+62"
+              placeholder="08xxxxxxxxxx"
               className="dark:bg-gray-700 dark:text-white p-2 rounded w-full"
             />
           </div>

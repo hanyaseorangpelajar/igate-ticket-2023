@@ -105,16 +105,21 @@ function EventDetails() {
           <h2 className="bg-black text-white rounded p-2">
             Bagaimana tata cara pembelian tiket online?
           </h2>
-          <p>
-            1. Bukalah online ticketing via https://itix.com/. Lalu scroll ke
-            bagian pembayaran maka ditemukan QRIS untuk discan dan lakukanlah
-            pembayaran (satu pembayaran hanya untuk satu orang)
-          </p>
-          <br></br>
-          <p>
-            2. Scroll kebawah lagi maka ada form data diri dan upload bukti
-            pembayaran, isi semua field dan pastikan data sudah benar.
-          </p>
+          <ol className="list-decimal p-2 pl-8">
+            <li className="pb-4">
+              Bukalah online ticketing via https://itix.com/. Lalu scroll ke
+              bagian pembayaran maka ditemukan QRIS untuk discan dan lakukanlah
+              pembayaran (satu pembayaran hanya untuk satu orang)
+            </li>
+            <li className="pb-4">
+              Scroll kebawah lagi maka ada form data diri dan upload bukti
+              pembayaran, isi semua field dan pastikan data sudah benar.
+            </li>
+            <li className="pb-4">
+              Tunggu hingga alert box muncul, lalu tekan "OK"
+            </li>
+            <li>Selesai maniezz</li>
+          </ol>
         </div>
         <div className="bg-white text-black rounded m-4 p-4">
           <h2 className="bg-black text-white rounded p-2">
