@@ -1,7 +1,8 @@
 "use client";
 import React, { useState } from "react";
-import { db } from "@/app/firebaseConfig";
+import { db, storage } from "@/app/firebaseConfig";
 import { collection, addDoc } from "firebase/firestore";
+import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
 
 async function addData(
   email: string,
@@ -26,6 +27,8 @@ async function addData(
   }
 }
 
+type FormFile = File | null;
+
 function Form() {
   const [formData, setFormData] = useState({
     email: "",
@@ -34,6 +37,8 @@ function Form() {
     batchYear: "2023",
     phoneNumber: "",
   });
+
+  const [file, setFile] = useState<FormFile>(null);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
@@ -47,14 +52,23 @@ function Form() {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const added = await addData(
-      formData.email,
-      formData.name,
-      formData.nim,
-      parseInt(formData.batchYear),
-      formData.phoneNumber
-    );
-    if (added) {
+    try {
+      const added = await addData(
+        formData.email,
+        formData.name,
+        formData.nim,
+        parseInt(formData.batchYear),
+        formData.phoneNumber
+      );
+
+      if (added && file) {
+        const storageRef = ref(storage, `bukti-pembayaran/${file.name}`);
+        await uploadBytes(storageRef, file);
+        const downloadURL = await getDownloadURL(storageRef);
+
+        console.log("File uploaded. Download URL:", downloadURL);
+      }
+
       setFormData({
         email: "",
         name: "",
@@ -63,7 +77,11 @@ function Form() {
         phoneNumber: "",
       });
 
+      setFile(null);
+
       alert("Data Added");
+    } catch (error) {
+      console.error("Error:", error);
     }
   };
 
@@ -132,6 +150,17 @@ function Form() {
               onChange={handleInputChange}
               required
               placeholder="+62"
+              className="dark:bg-gray-700 dark:text-white p-2 rounded w-full"
+            />
+          </div>
+          <div className="mb-4">
+            <label>Bukti Pembayaran:</label>
+            <input
+              type="file"
+              onChange={(e) =>
+                setFile(e.target.files ? e.target.files[0] : null)
+              }
+              required
               className="dark:bg-gray-700 dark:text-white p-2 rounded w-full"
             />
           </div>
