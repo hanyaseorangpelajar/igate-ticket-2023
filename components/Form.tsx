@@ -79,7 +79,7 @@ function Form() {
 
       setFile(null);
 
-      alert("Data Added");
+      alert("✨ Terima kasih sudah mendaftar ^_^ ✨");
 
       window.location.reload();
     } catch (error) {
