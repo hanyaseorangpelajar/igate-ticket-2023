@@ -52,11 +52,30 @@ function Form() {
     setFormData({ ...formData, [name]: value });
   };
 
+  const allowedFileTypes = ["image/jpeg", "image/png", "application/pdf"];
+  const maxFileSize = 2 * 1024 * 1024; // 2MB
+
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
 
     try {
       if (file) {
+        // Check file type
+        if (!allowedFileTypes.includes(file.type)) {
+          alert(
+            "File type not allowed. Please upload a JPG, JPEG, PNG, or PDF file."
+          );
+          return;
+        }
+
+        // Check file size
+        if (file.size > maxFileSize) {
+          alert(
+            "File size exceeds the maximum limit of 2MB. Please upload a smaller file."
+          );
+          return;
+        }
+
         const storageRef = ref(storage, `bukti-pembayaran/${file.name}`);
         await uploadBytes(storageRef, file);
 
