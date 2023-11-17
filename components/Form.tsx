@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { db, storage } from "@/app/firebaseConfig";
 import { collection, addDoc } from "firebase/firestore";
 import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
+import { serverTimestamp } from "firebase/firestore";
 
 async function addData(
   email: string,
@@ -20,7 +21,9 @@ async function addData(
       batchYear: batchYear,
       phoneNumber: phoneNumber,
       fileUrl: fileUrl,
+      timestamp: serverTimestamp(),
     });
+
     console.log("Data recorded with ID: ", docRef.id);
     return true;
   } catch (error) {
@@ -53,25 +56,23 @@ function Form() {
   };
 
   const allowedFileTypes = ["image/jpeg", "image/png", "application/pdf"];
-  const maxFileSize = 2 * 1024 * 1024; // 2MB
+  const maxFileSize = 2 * 1024 * 1024;
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
 
     try {
       if (file) {
-        // Check file type
         if (!allowedFileTypes.includes(file.type)) {
           alert(
-            "File type not allowed. Please upload a JPG, JPEG, PNG, or PDF file."
+            "Tipe file yang tidak didukung. Tolong gunakan format JPG, JPEG, PNG, atau PDF file."
           );
           return;
         }
 
-        // Check file size
         if (file.size > maxFileSize) {
           alert(
-            "File size exceeds the maximum limit of 2MB. Please upload a smaller file."
+            "Ukuran file maximum limit 2MB. Tolong upload file ukuran lebih kecil."
           );
           return;
         }
@@ -161,7 +162,7 @@ function Form() {
               <option value="2023">2023</option>
               <option value="2022">2022</option>
               <option value="2021">2021</option>
-              <option value="2021">2020</option>
+              <option value="2020">2020</option>
               <option value="Others">Others</option>
             </select>
           </div>
@@ -178,7 +179,7 @@ function Form() {
             />
           </div>
           <div className="mb-4">
-            <label>Bukti Pembayaran:</label>
+            <label>Bukti Pembayaran (max 2MB):</label>
             <input
               type="file"
               onChange={(e) =>

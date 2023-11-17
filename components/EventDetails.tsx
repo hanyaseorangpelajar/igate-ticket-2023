@@ -11,8 +11,8 @@ function EventDetails() {
             <ul className="list-disc">
               <li>Mematuhi peraturan yang ada.</li>
               <li>
-                Berpakaian rapi sesuai dengan dresscode yang ditentukan
-                (formal).
+                Berpakaian rapi sesuai dengan dresscode yang ditentukan (on
+                @igate.2023 Instagram).
               </li>
               <li>
                 Datang tepat waktu (open gate pada pukul 14.00 WIB dan close
@@ -20,7 +20,7 @@ function EventDetails() {
               </li>
               <li>Kendaraan diparkirkan sesuai arahan dari panitia.</li>
               <li>Dianjurkan membawa obat-obatan pribadi jika diperlukan.</li>
-              <li>Menunjukkan bukti pembelian tiket (*masih ditanyakan).</li>
+              <li>Menunjukkan bukti pembelian tiket.</li>
               <li>Waspada dengan barang bawaan.</li>
               <li>Buang sampah pada tempat yang telah disediakan.</li>
             </ul>
@@ -107,7 +107,7 @@ function EventDetails() {
           </h2>
           <ol className="list-decimal p-2 pl-8">
             <li className="pb-4">
-              Bukalah online ticketing via https://itix.com/. Lalu scroll ke
+              Bukalah online ticketing via https://igate.fun/. Lalu scroll ke
               bagian pembayaran maka ditemukan QRIS untuk discan dan lakukanlah
               pembayaran (satu pembayaran hanya untuk satu orang)
             </li>
@@ -132,8 +132,7 @@ function EventDetails() {
         </div>
         <div className="bg-white text-black rounded m-4 p-4">
           <h2 className="bg-black text-white rounded p-2">Dresscode</h2>
-          <p>Laki-Laki: Jas (Kemeja)</p>
-          <p>Perempuan: Dress atau Bawahan Rok</p>
+          <p>on @igate.2023 Instagram</p>
         </div>
       </div>
     </div>

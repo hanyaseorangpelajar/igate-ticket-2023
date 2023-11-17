@@ -3,7 +3,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 export const metadata: Metadata = {
-  title: "I-Tix | Welcome",
+  title: "I-GATE | Welcome",
   description: "Ticketing system for I-Gate 2023",
 };
 
