@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import { db, storage } from "@/app/firebaseConfig";
+import { db, storage } from "@/service/config";
 import { collection, addDoc } from "firebase/firestore";
 import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import { serverTimestamp } from "firebase/firestore";
@@ -193,6 +193,7 @@ function Form() {
             <button
               type="submit"
               className="dark:bg-blue-600 text-white p-2 rounded w-full"
+              // className="bg-gray-400 text-white p-2 rounded w-full"
             >
               Submit
             </button>
