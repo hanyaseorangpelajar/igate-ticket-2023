@@ -74,7 +74,7 @@ function EventDetails() {
             Kapan dan dimana I-GATE diselenggarakan?
           </h2>
           <p>
-            I-GATE akan dilaksanakan pada hari Sabtu, 9 Desember 2023 di Gedung
+            I-GATE akan dilaksanakan pada hari Jumat, 22 Desember 2023 di Gedung
             Prof. Soedarto, S.H. Pastikan kamu segera datang untuk meramaikan
             acara I-GATE karena banyak keseruan yang bisa kamu dapatkan di sini!
             I-GATE akan open gate mulai pukul 14.00 Jangan lupa untuk dicatat
@@ -126,8 +126,8 @@ function EventDetails() {
             Beli tiket offline?
           </h2>
           <p>
-            Tidak disediakan. Seluruh pembelian tiket hanya dilakukan melalui
-            web.
+            Ya, kamu bisa membeli tiket secara OTS di Prof. Soedarto pada
+            tanggal 22 Desember 2023.
           </p>
         </div>
         <div className="bg-white text-black rounded m-4 p-4">
