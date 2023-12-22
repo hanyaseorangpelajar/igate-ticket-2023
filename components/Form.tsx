@@ -119,7 +119,7 @@ function Form() {
   return (
     <div className="flex justify-center items-center h-full border-gray-400 border-dashed border-4 m-4 p-4">
       <div className="bg-black text-white p-4 m-2 rounded-lg w-full max-w-md border-white border-dashed border-2">
-        <h2 className="text-2xl mb-4">Registration</h2>
+        <h2 className="text-2xl mb-4">Registration On-The-Spot</h2>
         {loading ? (
           <Loading />
         ) : (
@@ -222,8 +222,7 @@ function Form() {
               Terima Kasih sudah mendaftar.
             </h2>
             <p className="p-2">
-              Kami akan mengirimkan tiket kamu, setelah pembayaran sudah
-              diverifikasi.
+              Silahkan menuju ke meja registrasi untuk konfirmasi kehadiran.
             </p>
           </Modal>
         )}

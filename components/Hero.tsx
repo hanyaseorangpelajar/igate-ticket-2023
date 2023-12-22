@@ -9,18 +9,6 @@ function Hero() {
         Start the journey, and make the new story
       </h1>
       <div className="p-4">
-        <p className="m-2 p-2 bg-red-600 text-red rounded-xl text-transform: uppercase font-bold text-center">
-          The online registration has been closed. We are currently validating
-          the data and payments from all of you. Please wait for the
-          confirmation email that will be sent via email. Thank you for your
-          enthusiasm.
-        </p>
-
-        <p className="m-2 p-2 bg-white text-black rounded-xl text-center">
-          Belum membeli tiket?. Tenang, kamu masih bisa menikmati keseruannya
-          dengan membeli tiket on the spot di Prof. Soedarto pada tanggal 22
-          Desember 2023.
-        </p>
         {/* <Image
           src="/I-GATE 2023 2.0.png"
           alt="ticket"
@@ -28,6 +16,20 @@ function Hero() {
           height={800}
           className="shadow-white"
         /> */}
+        <h1 className="p-4 m-5 bg-white text-black rounded-xl text-transform: uppercase font-bold text-center">
+          Get ready for an epic night because tonight is THE night! 🎉 It's time
+          to let loose, have fun, and create some unforgettable memories. The
+          party is calling, and we've got a date with a night to remember! Dress
+          to impress, put on your dancing shoes, and bring your A-game because
+          we're about to turn this night into something legendary. Whether it's
+          the beats that make us move, the laughter that fills the air, or the
+          stories we'll share, let's savor every moment. Tonight is all about
+          joy, laughter, and good vibes. So, let's leave all worries at the door
+          and immerse ourselves in the celebration. It's not just any night –
+          it's the night we've been waiting for! See you on the dance floor,
+          ready to make tonight absolutely amazing! Cheers to the night,
+          <span className="p-1 bg-black text-white rounded">dfrst</span>
+        </h1>
       </div>
       <div className="p-4">
         <p className="text-4xl text-white font-extrabold mb-4">
